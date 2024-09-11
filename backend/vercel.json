@@ -1,15 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "backend/app.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "/backend/app.js" }
-    ],
-    "env": {
-      "MONGO_URI": "mongodb+srv://lihinisupunikaw:lWW1RF07nPD5csOg@cluster0.j7swb.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0",
-      "PORT": "3000"
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/app.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "frontendclient/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontendclient/build"
+      }
     }
-    
-    
+  ],
+  "routes": [
+    {
+      "src": "/services/(.*)",
+      "dest": "/backend/app.js"
+    }
+  ]
 }

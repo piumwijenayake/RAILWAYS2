@@ -30,12 +30,12 @@ mongoose
   });
 
 const locationRoutes = require("./routes/locationRoutes");
-app.use("/api", locationRoutes);
+app.use("/services/api", locationRoutes);
 const trainseatsroutes=require('./routes/trainseatroutes')
 const Bookingroutes=require('./routes/BookingConfirmation')
 
-app.use("/book",trainseatsroutes);
-app.use("/books",Bookingroutes);
+app.use("/services/book",trainseatsroutes);
+app.use("/services/books",Bookingroutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

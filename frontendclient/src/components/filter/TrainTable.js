@@ -80,7 +80,7 @@ const TrainTable = ({ results, selected, handleSelectAllClick, handleClick, isSe
     setLoading(true);
     setDataPosting(true);
     try {
-      const response = await axios.post('http://localhost:3000/books/trains/Bookingseats', {
+      const response = await axios.post('http://localhost:3000/services/books/trains/Bookingseats', {
         customerName: passengerInfo.name,
         trainName: selectedRowData.trainnm,
         fromLocation: selectedRowData.fromlocation,

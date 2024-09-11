@@ -21,7 +21,7 @@ const TrainMap = () => {
     const fetchTrainLocations = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/trains/latest-locations"
+          "http://localhost:3000/services/api/trains/latest-locations"
         );
         setTrainLocations(response.data);
       } catch (error) {

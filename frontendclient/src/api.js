@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "http://localhost:3000/services/api";
 
 export const getTrainLocation = async (trainId) => {
   const response = await axios.get(`${API_URL}/trains/${trainId}/location`);

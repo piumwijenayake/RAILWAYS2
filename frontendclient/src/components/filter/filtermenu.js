@@ -35,7 +35,7 @@ const handleDropdown2Change = (event) => {
 
   const handleSearch = async () => {
       try {
-          const response = await axios.post('http://localhost:3000/book/train/searchseats', {
+          const response = await axios.post('http://localhost:3000/services/book/train/searchseats', {
               fromlocation,
               tolocation,
               datearrived,

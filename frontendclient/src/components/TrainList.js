@@ -9,7 +9,7 @@ const TrainList = ({ onSelectTrain }) => {
     const fetchTrains = async () => {
       try {
         // Replace with your actual endpoint for listing trains
-        const response = await axios.get("http://localhost:3000/api/trains");
+        const response = await axios.get("http://localhost:3000/services/api/trains");
         setTrains(response.data);
       } catch (error) {
         console.error("Error fetching trains", error);
